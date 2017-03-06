@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+%\graphicspath{ {/Users/semenfedotov/Desktop/Job/images} }
+\graphicspath{ {/Users/semenfedotov/Desktop/ImagesLaTex/} }
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage[a4paper,left=20mm,right=20mm,
+top=10mm,bottom=20mm,bindingoffset=0cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+
+
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+
+
+%PYTHON HIGHLIGHTS
+%_______________------_____________---------____
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{HTML}{0C7F12}
+\definecolor{deepred}{HTML}{B82327}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepred},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+%______________________
+
+
+
+\definecolor{background}{HTML}{000000}
+\definecolor{comments}{HTML}{51D05D}
+\definecolor{class}{HTML}{D63DA3}
+\definecolor{global}{HTML}{29F096}
+\definecolor{macros}{HTML}{E4834C}
+\definecolor{string}{HTML}{FF484D}
+\definecolor{digit}{HTML}{8789FB}
+\definecolor{std}{HTML}{0BB3FC}
+
+
+
+\lstset{language=C++,
+				backgroundcolor=\color{background}\ttfamily,
+                basicstyle=\ttfamily\color{white},
+                deletekeywords={\text{include}},
+                keywordstyle=\color{class}\ttfamily,
+                keywordstyle=[2]\color{macros},
+                keywordstyle=[3]\color{class},
+                keywordstyle=[4]\color{std},
+                keywordstyle=[5]\color{global},
+                stringstyle=\color{string}\ttfamily,
+                commentstyle=\color{comments}\ttfamily,
+                showstringspaces=false,
+                %identifierstyle=\color{blue}\ttfamily,
+                numberstyle=\tiny\color{digit}\ttfamily,
+                keywords=[2]{\text{include}, INT32_MAX},
+                keywords=[3]{if, for, else, int, while, do, double, bool, char, false, true, break, return, class, public, private, default, const, void},
+                keywords=[4]{std,vector, pair, Edge, Point, resize, push_back, rand, swap},
+                keywords=[5]{DSU, PerfectMatching, SpanningTree},
+                morecomment=[l][\color{macros}]{\#}
+		}
+
+
+
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+
+
+
+\newcommand{\tab}[1]{\hspace{#1mm}}
+\newcommand{\totext}[1]{\stackrel{\textup{#1}}{\to}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\argmin}[1]{\underset{#1}{\mathrm{argmin}}}
+\newcommand{\argmax}[1]{\underset{#1}{\mathrm{argmax}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[section]{$\text{Лемма}$}
+%
+
+
+
+
+\theoremstyle{plain}
+\newtheorem{theo}{Теорема}
+\newtheorem{stat}{Утверждение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{pro}{Задача}
+\newtheorem{con}{Гипотеза}
+\newtheorem{condi}{Условие}
+\newtheorem{ans}{Ответ}
+\theoremstyle{definition}
+\newtheorem{defi}{Определение}
+\newtheorem{note}{Замечание}
+
+
+
+
+
+
+
+
+
+
+
+
+\title{Задание 1}
+\author{Семен Федотов, 2 группа}
+\date{Февраль, 2017}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+	\maketitle
+	
+\section{Задача 1.}
+ Пусть $X_1, \dots , X_n$ -  выборка из нормального распределения с параметрами $(a, \sigma^2)$. Найти доверительный интервал уровня $\gamma$, для его третьего момента.
+\begin{proof}
+	Для начала найдем этот третий момент:
+	Знаем, что центральный нечетный момент равен нулю у нормальной с.в. То есть: $0 = E(X - a)^3 = E(X^3 - 3aX^2 + 3a^2X - a^3) = EX^3 - 3a(a^2 + \sigma^2) + 3a^3 - a^3 \Rightarrow EX^3 = a^3 + 3a\sigma^2$. Для этой величины нужен нам доверительный интервал. Из курса статистики, мы умеем строить доверительный интервал для a и $\sigma^2$, при неизвестный обоих параметрах. Построим уровня доверия: $\gamma + c_1 u \gamma + c_2$, константы позже подберем. Вот эти интервалы:
+	1) $$P(\overline{X} - \sqrt{\frac{S^2}{n - 1}} \cdot z_{\frac{1 + (\gamma + c_1)}{2}} < \alpha < \overline{X} + \sqrt{\frac{S^2}{n - 1}} \cdot z_{\frac{1 + (\gamma + c_1)}{2}}) = \gamma + c_1$$ Тут квантиль распр Стьюдента с (n - 1) степ свободы.
+	2) $$P(0 < \sigma^2 < \frac{nS^2}{z_{1 - (\gamma + c_2)}}) = \gamma + c_2$$, Тут квантиль хи квадрат с (n - 1) степенью свободы
+	
+	Эти доверительные интервалы получаются из следствия теоремы об ортогональном разложении.
+	
+	Супер, обозначим за $\Omega_1 $ - множество тех $\omega$, на которых выполняется первый довинт. Аналогично введем $\Omega_2$.
+	Имея доверительный интервал для $\sigma^2$, он очевидно преобразуется, чтобы найти довинт того же уровня доверия для $3\sigma^2$. Хотим построить довинт для $3\sigma^2 \cdot a$.
+	Возьмем такой:$(\min{(0, left_1)} < 3\sigma^2 \cdot a < 3right_2 \cdot right_1) \geq \gamma_3$(это если у доверительного инетрвала для а обе границы положительные, аналогично рассматриваются оставшиеся случаи).(Пусть этот довинт выполняется на $\Omega_3$) где left и right - левые и правые границы тех интервалов. Далее, имея интервал для а, он очевидно, преобразуется до $а^3$(все возведем в куб, уровень доверия останется тот же). Нам нужен довинт для суммы  $a^3 + 3\sigma^2 \cdot a$. Сложим левые и правые границы. Тогда оно верно по крайней мере на $\omega \in \Omega_1 \cap \Omega_3$. Найдем долю этого пересечения. Она больше либо равна $\frac{\Omega_1 + \Omega_3 - \Omega}{\Omega}$. Нужно, чтобы эта величина была хотя бы $\gamma$. мы это можем сделать подобрав хорошо константы $c_1, c_2$
+\end{proof}	
+	
+	
+	
+\section{Задача 2.}
+ Пусть $X_1, \dots , X_n$ – выборка из распределения 
+ $U(-\theta,\theta), \theta > 0$. Построить оценку параметра 
+ $\theta$ методом максимального правдоподобия. Проверить её на состоятельность.	
+\begin{proof}
+	Во-первых, посмотрим на плотность данного распределения: $p(x) = \frac{1}{2\theta} \cdot I(x \in [-\theta, \theta])$. Приступим к оцениванию: распишем правдоподобие нашей выборки: $f(X, \theta) = (\frac{1}{2\theta})^n \cdot I(x_1 \in [-\theta, \theta], \dots , x_n \in [-\theta, \theta])$. То есть, правдоподобие будет равно нулю, если хотя бы один элемент из выборки не лежит в отрезке от $-\theta$ до $\theta$. Мы хотим найти $\argmax{\theta}$. Заметим, чтобы правдоподобие было равно нулю, то $\theta$ должна удовлетворять следующему условию: $\theta \geq \max{(|X_{(1)}|, |X_{(n)}|)} \Leftrightarrow \theta \geq \max{(|x_1|, \dots ,|x_n|)}$ Хорошо, но чем больше $\theta$, удовл. этому условию, тем меньше значение правдоподобия. Значит, $\hat{\theta} = \max{(|x_1|, \dots ,|x_n|)}$. Так как у нас изначально набор н.о.р., то мы можем сначала модуля равномерного, а потом максимума этих модулей. Если $\xi \sim U(-\theta, \theta),$ то $|\xi| \sim U(0, \theta)$. (Просто плотность в каждой точке увеличилась в 2 раза). Обозначим $|x_i|$ как $z_i$. ну а теперь найдем распределение максимума модулей: $F(t) = P(max(z_1, \dots , z_n) \leq t) = P(z_1 \leq t, \dots , z_n \leq t) = \prod\limits_{i = 1}^{n}P(z_i \leq t) = (F_{z_1}(t))^n$ (Так как если был набор независимых, то применив к ним борелевскую функцию, получим снова независимые в совокуп, ну а у таких вероятность произведения распадается в произведение вероятностей)
+	,	пусть t лежит внутри $[0, \theta]$ чтобы не писать индикатор).
+	Найдем теперь плотность максимума: нужно взять и продифференцировать функцию распределения. $((F_{z_1}(t))^n)' = ((\frac{t}{\theta})^n)' = \frac{n}{\theta} \cdot (\frac{t}{\theta})^{n - 1}$. Хотим проверить ее на состоятельность , т.е.
+		 $\forall \varepsilon > 0$    $ P(|\hat{\theta} - \theta| \geq \varepsilon) \to 0$. $P(|\hat{\theta} - \theta| \geq \varepsilon) = P(\hat{\theta} - \theta \geq \varepsilon) + P(\hat{\theta} - \theta \leq -\varepsilon) = 0 + F_{\hat{\theta}}(\theta - \varepsilon)$=/(Здесь первое слагаемое равно нулю, т.к. $\hat{\theta} <= \theta$ Ведь максимум модулей в выборке никогда не превысит параметр равномерного распределение, может лишь только быть меньшим или равным)./= $ (\frac{\theta - \varepsilon}{\theta})^n \to 0$ при $n \to +\infty$. Так как $\varepsilon > 0$. Отсюда следует, что наша оценка является состоятельной!
+		 $\hat{\theta} = \max{(|x_1|, \dots ,|x_n|)}$ 
+	\end{proof}
+	
+\section{Задача 3.}
+По выборке $X_1, \dots , X_n$ из распределения $U(0, \theta), \theta > 1$, с помощью метода моментов найти несмещенную оценку параметра $\frac{1}{\theta}$.
+\begin{proof}
+	В чем заключается метод моментов в нашем случае? - В подборе пробной функции g(x) такой, что оценка, полученная благодаря данной функции, окажется несмещенной для параметра $\frac{1}{\theta}$. Посмотрим на $Eg(X_1) = \int\limits_0^{\theta} \frac{1}{\theta} g(x) dx = \overline{g(X)}$. Отсюда надо выразить $\frac{1}{\theta}$, тогда и получим оценку этого параметра. $\int\limits_0^{\theta} \frac{1}{\theta} g(x) dx = \frac{1}{\theta}\int\limits_0^{\theta}  g(x) dx$. Посмотрим, а что будет, если $\int\limits_0^{\theta}  g(x) dx$ будет равен 1. Тогда $\frac{1}{\theta} = \overline{g(X)} = \hat{\theta}$ - оценка методом моментов с пробной функцией $g$. Но тогда посмотрим на матожидание этой оценки: $E\hat{\theta} = E\overline{g(X)}$=/ Из линейности матожидания/  $= Eg(X_1) = \frac{1}{\theta}$, как мы предположили раньше $\Rightarrow$ получили несмещенную оценку! Значит, нам осталось подобрать функцию, удовлетворяющую следующему свойству: $\int\limits_0^{\theta}  g(x) dx$ = 1. Таких функций очень много, благодаря тому, что $\theta > 1$. можем отделить и сделать нашу g(x) = 0, при x > 1. То есть осталось ее определить на [0,1], так, чтобы интеграл по [0,1] был равен 1. Ну, например, можно взять тождественную единицу, ну или $2x; 3x^2, \dots$. Пусть все же g(x) = I([0,1]) - индикатор отрезка [0,1]. Понятно, что интеграл будет равен 1. $\hat{\theta} = \overline{I_X([0, 1])}$
+\end{proof}	
+
+\section{Задача 4.}
+Пусть $X_1, \dots , X_n$ - выборка из распределения $U(a,b), b > a > 0$Выбрав в качестве априорного распределения сопряженное, найти байесовскую оценку двумерного параметра (a,b).	
+\begin{proof}
+	Возьмем в качестве сопряженного распределения двумерное распределение Парето с параметрами $(\hat{a}, \hat{b}, \hat{\alpha})$(Его можно получить из обычного Парето одномерного, аккуратно проинтегрировав с индикаторами. Откуда вообще Парето? Если бы у нас было распределение от 0 до $\theta$, то Одномерный Парето является к нему сопряженным). Покажем, что оно сопряженное. Рассмотрим плотность двумерного Парето с этими параметрами:
+	 $p(a, b) = \frac{ \hat{\alpha}(\hat{\alpha} + 1) 
+	 \cdot (\hat{b} - \hat{a})^{\hat{\alpha}}}{  (b - a)^{\hat{\alpha} + 2} } \cdot I(a \leq \hat{a}, b \geq \hat{b})$. Для нахождения байесовской оценки не будем считать условное матожидание, а возьмем $\argmax{\theta} p(\theta | X). p(\theta | X) = \frac{p(X | \theta)p(\theta)}{\int\limits_{\theta^* \in \Theta} p(X|\theta^*)p(\theta^*)d\theta^*}$. То, что в знаменателе, вообще не зависит от $\theta$, значит можем убрать. Распишем числитель, воспользовавшись априорными знаниями и $\theta = (a,b)$: $p(x|\theta)p(\theta) = \frac{1}{(b - a)^{n + \hat{\alpha} + 2}} \cdot  \hat{\alpha}(\hat{\alpha} + 1) \cdot I(a \leq \hat{a}, b \geq  \hat{b}) \cdot \prod\limits_{i = 1}^{n}I(a \leq X_i \leq b)$. Так, как нам не важны константы, то уберем их. В конце концов, получим снова двумерный Парето, но с другими параметрами, а именно: $(\min{(\hat{a}, X_1, \dots, X_n)}, \max{(\hat{b}, X_1, \dots, X_n)}, \alpha + n)$. Супер, это распределение является сопряженным. Осталось понять при каком (a, b), достигается максимум у плотности нового Парето.Очевидно, он будет достигнуть при параметрах a и b, как можно более близких к друг другу, чтобы разность была как можно меньше.
+	 То есть, когда $(a, b) = (\min{(\hat{a}, X_1, \dots, X_n)}, \max{(\hat{b}, X_1, \dots, X_n)}) \leftarrow$ Ответ. Иначе индикатор занулится и плотномть будет нулевой.
+\end{proof}
+\end{document}

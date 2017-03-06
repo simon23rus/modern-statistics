@@ -1,0 +1,270 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+%\graphicspath{ {/Users/semenfedotov/Desktop/Job/images} }
+\graphicspath{ {/Users/semenfedotov/Desktop/ImagesLaTex/} }
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage[a4paper,left=20mm,right=20mm,
+top=10mm,bottom=20mm,bindingoffset=0cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+
+
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+
+
+%PYTHON HIGHLIGHTS
+%_______________------_____________---------____
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{HTML}{0C7F12}
+\definecolor{deepred}{HTML}{B82327}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepred},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+%______________________
+
+
+
+\definecolor{background}{HTML}{000000}
+\definecolor{comments}{HTML}{51D05D}
+\definecolor{class}{HTML}{D63DA3}
+\definecolor{global}{HTML}{29F096}
+\definecolor{macros}{HTML}{E4834C}
+\definecolor{string}{HTML}{FF484D}
+\definecolor{digit}{HTML}{8789FB}
+\definecolor{std}{HTML}{0BB3FC}
+
+
+
+\lstset{language=C++,
+				backgroundcolor=\color{background}\ttfamily,
+                basicstyle=\ttfamily\color{white},
+                deletekeywords={\text{include}},
+                keywordstyle=\color{class}\ttfamily,
+                keywordstyle=[2]\color{macros},
+                keywordstyle=[3]\color{class},
+                keywordstyle=[4]\color{std},
+                keywordstyle=[5]\color{global},
+                stringstyle=\color{string}\ttfamily,
+                commentstyle=\color{comments}\ttfamily,
+                showstringspaces=false,
+                %identifierstyle=\color{blue}\ttfamily,
+                numberstyle=\tiny\color{digit}\ttfamily,
+                keywords=[2]{\text{include}, INT32_MAX},
+                keywords=[3]{if, for, else, int, while, do, double, bool, char, false, true, break, return, class, public, private, default, const, void},
+                keywords=[4]{std,vector, pair, Edge, Point, resize, push_back, rand, swap},
+                keywords=[5]{DSU, PerfectMatching, SpanningTree},
+                morecomment=[l][\color{macros}]{\#}
+		}
+
+
+
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+
+
+
+\newcommand{\tab}[1]{\hspace{#1mm}}
+\newcommand{\totext}[1]{\stackrel{\textup{#1}}{\to}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\argmin}[1]{\underset{#1}{\mathrm{argmin}}}
+\newcommand{\argmax}[1]{\underset{#1}{\mathrm{argmax}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[section]{$\text{Лемма}$}
+%
+
+
+
+
+\theoremstyle{plain}
+\newtheorem{theo}{Теорема}
+\newtheorem{stat}{Утверждение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{pro}{Задача}
+\newtheorem{con}{Гипотеза}
+\newtheorem{condi}{Условие}
+\newtheorem{ans}{Ответ}
+\theoremstyle{definition}
+\newtheorem{defi}{Определение}
+\newtheorem{note}{Замечание}
+
+
+
+
+
+
+
+
+
+
+
+
+\title{Задание 2}
+\author{Семен Федотов, 2 группа}
+\date{Март, 2017}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+	\maketitle
+
+
+\begin{condi}
+	Пусть $X_1 \dots X_n$ - выборка из распределения Cauchy($\theta$). Построить оценку параметра $\theta$ методом моментов.
+\end{condi}
+
+\begin{proof}
+	Можно попробовать найти пробную функцию g так, чтобы интеграл($Eg(X_1)$) сходился. Сделаем так, чтобы g индикатором $I(\left(-\infty, -1 \rbrack \cup \lbrack-1, +\infty)\right) $, тогда интеграл будет сходиться и мы получим нужную нам оценку: $\hat{\theta} = \frac{1}{\tan(\frac{\pi \cdot(1 - \overline{g(X)})}{2})}$.
+	
+	Давайте покажем, как это получить: Наша g - четная функция $\Rightarrow \int\limits_{-\infty}^{+\infty}{g(x) \frac{\theta}{\pi(\theta^2 + x^2)}}dx = 2 \cdot \int\limits_{0}^{+\infty}{g(x) \frac{\theta}{\pi(\theta^2 + x^2)}}dx = / \text{g - индикатор, который не зануляется вне } \left(-1, 1\right) / = 2 \cdot \int\limits_{1}^{+\infty}{\frac{\theta}{\pi(\theta^2 + x^2)}}dx = \frac{2\theta}{\pi} \int\limits_{1}^{+\infty}{\frac{1}{(\theta^2 + x^2)}}dx =  \frac{2}{\pi\theta} \int\limits_{1}^{+\infty}{\frac{1}{(1 + \frac{x^2}{\theta^2})}}dx = / \text{Внесем под дифференциал } 
+	 \frac{x}{\theta} / = \frac{2}{\pi} \int\limits_{1}^{+\infty}{\frac{1}{(1 + (\frac{x}{\theta})^2)}}d\frac{x}{\theta} 
+	  = \frac{2}{\pi} \cdot \arctan(\frac{x}{\theta}) \mid_1^{+\infty} 
+	  $=$  \frac{2}{\pi}(\frac{\pi}{2} - \arctan{\frac{1}{\theta}})$ 
+	  $ = / \text{ Метод моментов } / = \overline{g(X)} = \overline{I_A(X)}, \text{ Где А = } ( -\infty, -1] \cup [-1, +\infty).$ Обозначим $\overline{g(X)} = \tilde{X}$. Тогда $\frac{2}{\pi} \cdot(\frac{\pi}{2} - \arctan{\frac{1}{\theta}}) = \tilde{X} \Leftrightarrow 1 - \frac{2}{\pi} \cdot \arctan{\frac{1}{\theta}} = \tilde{X} = \frac{\pi(1 - \tilde{X})}{2} = \arctan{\frac{1}{\theta}} \Leftrightarrow \tan(\frac{\pi(1 - \tilde{X})}{2}) = \frac{1}{\theta} \Rightarrow $ $$\hat{\theta} = 1\frac{1}{\tan(\frac{\pi(1 - \tilde{X})}{2})}$$ Вот мы и получили искомую оценку! Вообще есть множество вариантов взять пробную функцию, например, $\sin{\alpha x}$ или $\cos{\alpha x}$. Впоследствии, получим интеграл Лапласа, который сходится. Ну и сможем найти нужную нам оценку
+\end{proof}
+
+
+\begin{condi}
+	$\mathcal{N}(\theta, 1).$ Есть ли рнмк для $H_0 : \theta = 0$ против двусторонней альтернативы.
+\end{condi}
+
+\begin{proof}
+	Ответ: нет. Пусть все же есть рнмк для проверки нашей гипотезы: $\lbrace X \in B  \rbrace $ уровня значимости $\alpha$. Нужно проверить, что среди всех критериев с таким же уровнем значимости, он является наиболее мощным. Вообще, что такое уровень значимости в нашей задаче - такое число $\alpha: P_{\theta = 0}(X \in B) \leq \alpha$. То есть вероятность отвергнуть верную нулевую гипотезу не больше этого $\alpha$.
+	А далее, нужно проверить, является ли он наиболее мощным. То есть: $\forall P_x \in \mathcal{P}_1 \forall R: P_x(X \in B) \geq P_x(X \in R)$. Приведем док-во для одномерного случая(выборка размера 1), оно легко продолжается на случай выборки размера n.
+	Что такое $X \sim \mathcal{N}(0,1); P_{\theta = 0}(X \in B) = \int\limits_{x \in B}\frac{1}{\sqrt{2\pi}} \cdot e^{-\frac{x^2}{2}}dx$ -  мера множества B. Возьмем множество R такой же меры, как и B. Чтобы прийти к противоречию, нам нужно доказать, что мощность $Q(R, P_x)$ больше мощности $Q(B, P_x)$, хотя бы на одном из распределений и альтернативной гипотезы. Возьмем R далеко в конце распределения(далеко в +), нужно подобрать теперь сдвиг($\theta$) после которого будет R находиться около матожидания(там мера его будет наибольшей.), а B переедет налево, в конец распределения. Конечно, мн-во B может иметь вообще любой характер(разреженное, содержащее луч). В конце концов мера сдвинутого R будет больше. Ну то же самое можно провернуть и в многомерном случае. Так как при справедливости нулевой гипотезы у нас центр распределения в нуле, то оно будет симметрично. Будем, например делать срез по одной из компонент и переходить в пространство меньшей размерности(Могу, если надо у доски рассказать, разобрать случаи) \\
+	
+	
+	Либо можно попробовать  так. Применим 2 раза т. о монотонном отношении правдоподобия и построим два соответсвующих критерия(рнмк) для проверки $H_1: \theta \leq \theta_0, R_1: \theta > \theta_0$ u $H_2: \theta \geq \theta_0, R_2: \theta < \theta_0$. Пусть теперь существует рнмк для исходной задачи (H, vs R). ${X \in B}$. Тогда $P_{альтернатива}(X \in B) \geq P(S(X) > u_1)$, и такое же нер-во для второго критерия. $\theta_2 < \theta_0 < \theta_1$ А так как мы исп отношение правдоподобий, то наши критерии переписываются в виде  $\frac{p(x \mid \theta_1)}{p(x \mid \theta_0)} > \lambda_1$ и  $\frac{p(x \mid \theta_2)}{p(x \mid \theta_0)} > \lambda_2$
+		Вот, но теперь пусть на какой-то выборке гипотеза отвергается. Но так как отношение правдоподобий монотонно по статистике S, то $\forall y: T(y) > T(x) \Rightarrow $ для y тоже отвергается гипотеза, так как знак сохранится(cледует из первой части нового критерия), и аналогично для 
+		$\forall y: T(y) < T(x) \Rightarrow $ отвергается(из второй части). Что тогда? Если хотя бы на какой то выборке у нас гипотеза отвергается, то она отвергается при любой другой выборке. Ну а если нет такого, то она отвергается вообще для любой выборки. Противоречие!
+		
+		\end{proof}
+
+
+\begin{condi}
+	Пусть $X_1 \dots X_n $ - выборка из распределения $\Gamma(\alpha, \theta)$ - оба параметра неизвестны. Предложить критерий для проверки гипотезы $H_0: \alpha = 1$ против $H_1: \alpha > 1$.
+\end{condi}
+
+\begin{proof}
+	Воспользуемся методом построения асимптотического критерия. В качестве статистики возьмем 
+	$\frac{\sum X_i - nEX_1}{\sqrt{nDX_1}} \totext{d} \mathcal{N}(0, 1)$
+	, где $EX_1 = \frac{\alpha}{\theta}, DX_1 = \frac{\alpha}{\theta^2}$ Это верно из ЦПТ(у нас набор норсв с конечной дисперсией). Подставим матожидание и дисперсию:
+	$$\frac{\theta \sum X_i - n\alpha_0}{\sqrt{n\alpha_0}} \totext{d} \mathcal{N}(0, 1)$$ Есть проблема, мы не знаем ни один параметр из распределения, но если мы подставим их состоятельные оценки, то сходимость сохранится(). Оценки найдем методом моментов, и если выйдет так, что $m_1^-1 , m_2^-1$ окажутся непрерывными, то оценка будет состоятельной. В кач-ве пробных функций возьмем стандартные: $x$ и $x^2$. 
+	$$ \begin{cases}
+		\frac{\alpha}{\theta} = \overline{X}, \\
+		\frac{\alpha + \alpha^2}{\theta^2} = \overline{X^2}
+		\end{cases} $$ (видно, что мы получили непрерывные функции, а значит, оценка будет состоятельной) Выразим оттуда неизвестный нам параметры и получим:
+		$$\begin{cases}
+			\hat{\alpha} = \frac{\overline{X}^2}{\overline{X^2} - \overline{X}^2}, \\
+			\hat{\theta} = \frac{\overline{X}}{\overline{X^2} - \overline{X}^2}
+		\end{cases}$$. Подставим эти оценки в исходное выражение и возмьмем квантиль уровня 1 - $\alpha$ стандартного нормального распределения.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\end{document}
